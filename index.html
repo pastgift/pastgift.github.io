@@ -1,3 +1,60 @@
-<h1>
-Welcome to my personal web site
-</h1>
+<html>
+  <head>
+    <title>Pastgift</title>
+  </head>
+  <body>
+    <h1>
+      Pastgift
+    </h1>
+    <hr>
+    <p>
+      主要 Web 技术一览：
+      <ul>
+        <li>
+          Node.js 10.x
+          <ul>
+            <li>Express 4.x</li>
+            <li>Socket.io 2.x</li>
+          </ul>
+        </li>
+        <li>
+          Python v3.x
+          <ul>
+            <li>Celery 4.4.x</li>
+          </ul>
+        </li>
+        <li>Vue 2.x
+          <ul>
+            <li>ElementUI 2.13.x</li>
+          </ul>
+        </li>
+        <li>MySQL 5.7.x</li>
+        <li>Redis 4.x</li>
+        <li>阿里云</li>
+      </ul>
+      <pre>
+ +-------------------+
+ |        Vue        |
+ |      Browser      |
+ +-------------------+
+           |
+           v
+ +-------------------+
+ | Node.js (Express) |
+ |     API Server    |
+ +-------------------+
+           |
+           v
+   [Redis Task Queue]
+           |
+           v
+ +-------------------+
+ |  Python (Celery)  |
+ |    Task Worker    |
+ +-------------------+
+      </pre>
+    </p>
+    <hr>
+    <a href="http://www.beian.miit.gov.cn">苏ICP备16060547号-1</a>
+  </body>
+</html>
