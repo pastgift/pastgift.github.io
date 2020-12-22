@@ -3,58 +3,54 @@
     <title>Pastgift</title>
   </head>
   <body>
-    <h1>
-      Pastgift
-    </h1>
-    <hr>
-    <p>
-      主要 Web 技术一览：
-      <ul>
-        <li>
-          Node.js 10.x
-          <ul>
-            <li>Express 4.x</li>
-            <li>Socket.io 2.x</li>
-          </ul>
-        </li>
-        <li>
-          Python v3.x
-          <ul>
-            <li>Celery 4.4.x</li>
-          </ul>
-        </li>
-        <li>Vue 2.x
-          <ul>
-            <li>ElementUI 2.13.x</li>
-          </ul>
-        </li>
-        <li>MySQL 5.7.x</li>
-        <li>Redis 4.x</li>
-        <li>阿里云</li>
-      </ul>
-      <pre>
- +-------------------+
- |        Vue        |
- |      Browser      |
- +-------------------+
-           |
-           v
- +-------------------+
- | Node.js (Express) |
- |     API Server    |
- +-------------------+
-           |
-           v
-   [Redis Task Queue]
-           |
-           v
- +-------------------+
- |  Python (Celery)  |
- |    Task Worker    |
- +-------------------+
-      </pre>
-    </p>
-    <hr>
-    <a href="https://beian.miit.gov.cn">苏ICP备16060547号-1</a>
+    <style>
+      html, body {
+        padding: 0;
+        margin: 0;
+        background-color: black;
+      }
+      a {
+        text-decoration: none;
+        color: grey;
+        font-size: 12px;
+      }
+      p {
+        text-align: center;
+        line-height: 40px;
+      }
+      #dream {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: grey;
+        position: relative;
+      }
+      #beian {
+        position: absolute;
+        right: 3px;
+        bottom: 3px;
+      }
+    </style>
+    <div id="dream">
+      <p>
+        如果你正在读这段话，<br>
+        你已经昏迷快20年了。
+      </p>
+      <p>
+        我们现在正在尝试新的治疗方案。<br>
+        我们不知道这段信息会出现在你梦境的哪里，<br>
+        但是我们真心希望你可以看到。<br>
+      </p>
+      <p>
+        请快醒来！
+      </p>
+
+      <div id="beian">
+        <a href="https://beian.miit.gov.cn">苏ICP备16060547号-1</a>
+      </div>
+    </div>
   </body>
 </html>
