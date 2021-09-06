@@ -1,60 +1,131 @@
-<html>
+<html lang=zh-CN>
   <head>
     <title>Pastgift</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
   </head>
   <body>
     <style>
-      html, body {
-        padding: 0;
-        margin: 0;
-        background-color: black;
+      * {
+        color: #ddd;
+        font-family: monospace;
       }
-      a {
+      html, body {
+        padding: 0 0 50px 0;
+        margin: 0;
+      }
+      body {
+        background-image: url(imgs/bg.jpg);
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+      }
+      a, a:visited {
         text-decoration: none;
         color: grey;
-        font-size: 12px;
+      }
+      a:hover {
+        text-decoration: none;
+        color: white;
       }
       p {
-        text-align: center;
         line-height: 1.5;
-        width: 100%;
-        margin-bottom: 0;
       }
-      #dream {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-size: 25px;
-        color: grey;
-        position: relative;
+      h2 {
+        font-weight: bold;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #555;
+      }
+      h3 {
+        font-weight: bold;
+        margin-left: 50px;
+        margin-top: 20px;
+      }
+      h2 + p {
+        margin-left: 50px;
+      }
+      h3 + p {
+        margin-left: 100px;
+      }
+      #main {
+        background-color: rgba(51, 51, 51, .8);
+        padding: 0 50px 50px 50px;
+        margin-top: 50px;
+      }
+      #main p {
+        font-size: 18px;
       }
       #beian {
-        position: absolute;
-        right: 3px;
-        bottom: 3px;
+        position: fixed;
+        background-color: black;
+        padding: 10px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+      #beian * {
+        font-size: 16px;
       }
     </style>
-    <div id="dream">
-      <p>
-        <br>
-        如果你正在读这段话，<br>
-        你已经昏迷快20年了。
-      </p>
-      <p>
-        我们现在正在尝试新的治疗方案。<br>
-        我们不知道这段信息会出现在你梦境的哪里，<br>
-        但是我们真心希望你可以看到。<br>
-      </p>
-      <p>
-        请快醒来！
-        <br>
-      </p>
+    <div class="container">
+      <div id="main" class="col-lg-8 col-lg-offset-2">
+        <h2><span style="font-size: 40px">pastgift</span>，专注后端开发</h2>
+        <p>
+          某大学非计算机系毕业
+          <br>现任上海某公司高级软件架构师
+          <br>常用 Node.js、Python、Redis、MySQL
+          <br>略懂 Vue
+        </p>
+
+        <h2>可公开的作品</h2>
+
+        <h3>DataFlux Func</h3>
+        <p>
+          一个基于Python 的脚本开发、管理、执行平台
+          <br><a href="https://github.com/DataFlux-cn/dataflux-func" target="_blank"><i class="fa fa-github"></i> github.com/DataFlux-cn/dataflux-func</a>
+        </p>
+
+        <h3>MySQL Schema Diff</h3>
+        <p>
+          一个MySQL 数据库结构对比工具
+          <br><a href="https://github.com/pastgift/mysql-schema-diff" target="_blank"><i class="fa fa-github"></i> github.com/pastgift/mysql-schema-diff</a>
+        </p>
+
+        <h3>Funny Subtitle Pic</h3>
+        <p>
+          一个表情图片生成工具
+          <br><a href="https://github.com/pastgift/funny-subtitle-pic" target="_blank"><i class="fa fa-github"></i> github.com/pastgift/funny-subtitle-pic</a>
+        </p>
+
+        <h3>celery-client-js</h3>
+        <p>
+          一个Node.js 版Celery 客户端
+          <br><a href="https://github.com/pastgift/celery-client-js" target="_blank"><i class="fa fa-github"></i> github.com/pastgift/celery-client-js</a>
+        </p>
+
+        <h3>sorted-json-js</h3>
+        <p>
+          一个JSON 排序工具
+          <br><a href="https://github.com/pastgift/sorted-json-js" target="_blank"><i class="fa fa-github"></i> github.com/pastgift/sorted-json-js</a>
+        </p>
+
+        <h3>object-checker-js</h3>
+        <p>
+          一个JSON 结构检查工具
+          <br><a href="https://github.com/pastgift/object-checker-js" target="_blank"><i class="fa fa-github"></i> github.com/pastgift/object-checker-js</a>
+        </p>
+      </div>
 
       <div id="beian">
-        <a href="https://beian.miit.gov.cn">苏ICP备16060547号-1</a>
+        <a href="https://beian.miit.gov.cn" target="_blank">苏ICP备16060547号-1</a>
       </div>
     </div>
   </body>
