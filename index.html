@@ -25,11 +25,15 @@
         background-repeat: no-repeat;
         background-attachment:fixed;
       }
-      a, a:visited {
+      a,
+      a *,
+      a:visited,
+      a:visited * {
         text-decoration: none;
         color: grey;
       }
-      a:hover {
+      a:hover,
+      a:hover * {
         text-decoration: none;
         color: white;
       }
@@ -62,7 +66,7 @@
       #main p {
         font-size: 18px;
       }
-      #beian {
+      #beian-foot {
         position: fixed;
         background-color: black;
         padding: 10px;
@@ -71,7 +75,7 @@
         right: 0;
         text-align: center;
       }
-      #beian * {
+      #beian-foot * {
         font-size: 16px;
       }
     </style>
@@ -124,9 +128,31 @@
         </p>
       </div>
 
-      <div id="beian">
-        <a href="https://beian.miit.gov.cn" target="_blank">苏ICP备16060547号-1</a>
+      <div id="beian-foot">
+        <a target="_blank" href="" id="beianURL">
+          <img src="imgs/beian.png" style="margin-top: -5px;" />
+          苏公网安备 <span id="beian">32059002003734</span>号
+        </a>
+        &#12288;
+        <a target="_blank" href="https://beian.miit.gov.cn">苏ICP备<span id="miit">16060547号-1<span></a>
       </div>
     </div>
   </body>
 </html>
+
+<script type="text/javascript">
+  var topDomain = location.host.split('.').slice(-2).join('.');
+  var beianBaseURL = 'http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=';
+  var beianMap = {
+    'pastgift.com': { beian: '32059002003735', miit: '16060547号-3' },
+    'pastgift.net': { beian: '32059002003736', miit: '16060547号-2' },
+    default       : { beian: '32059002003734', miit: '16060547号-1' },
+  }
+
+  var beian = beianMap[topDomain] || beianMap.default;
+  $(function(){
+    $('#miit').text(beian.miit);
+    $('#beian').text(beian.beian);
+    $('#beianURL').attr('href', beianBaseURL + beian.beian);
+  })
+</script>
