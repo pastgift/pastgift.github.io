@@ -1,12 +1,17 @@
-<html>
+<!doctype html>
+<html lang="zh-CN">
   <head>
+    <meta charset="utf-8">
     <title>Pastgift</title>
-  </head>
-  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+      * {
+        box-sizing: border-box;
+      }
       html, body {
         padding: 0;
         margin: 0;
+        min-height: 100%;
         background-color: black;
       }
       a {
@@ -21,7 +26,7 @@
         margin-bottom: 0;
       }
       #dream {
-        height: 100%;
+        min-height: 100vh;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -30,13 +35,21 @@
         font-size: 25px;
         color: grey;
         position: relative;
+        padding: 24px;
       }
       #beian {
         position: absolute;
         right: 3px;
         bottom: 3px;
       }
+      @media (max-width: 767px) {
+        #dream {
+          font-size: 20px;
+        }
+      }
     </style>
+  </head>
+  <body>
     <div id="dream">
       <p>
         <br>
@@ -54,7 +67,7 @@
       </p>
 
       <div id="beian">
-        <a href="https://beian.miit.gov.cn">苏ICP备16060547号-1</a>
+        <a href="https://beian.miit.gov.cn" rel="noopener noreferrer">苏ICP备16060547号-1</a>
       </div>
     </div>
   </body>

@@ -1,10 +1,11 @@
-<html lang=zh-CN>
+<!doctype html>
+<html lang="zh-CN">
   <head>
+    <meta charset="utf-8">
     <title>Pastgift</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="zh-CN">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <script src="libs/jquery/jquery.min.js"></script>
@@ -13,24 +14,29 @@
   <body>
     <style>
       * {
+        box-sizing: border-box;
         color: #ddd;
         font-family: monospace;
       }
       html, body {
         padding: 0;
         margin: 0;
+        min-height: 100%;
       }
       body {
+        background-color: #111;
         background-image: url(imgs/bg.jpg);
         background-repeat: no-repeat;
-        background-attachment:fixed;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
       }
       a,
       a *,
       a:visited,
       a:visited *,
       a:focus,
-      a:focus *{
+      a:focus * {
         text-decoration: none;
         color: grey;
       }
@@ -68,7 +74,8 @@
         padding: 0;
       }
       #main {
-        width: 800px;
+        width: 100%;
+        max-width: 800px;
         background-color: rgba(51, 51, 51, .8);
         margin-top: 50px;
         margin-bottom: 50px;
@@ -85,81 +92,109 @@
       #beian-foot * {
         font-size: 16px;
       }
+      #beian-foot img {
+        margin-top: -5px;
+      }
+      #site-name {
+        font-size: 40px;
+      }
+      @media (max-width: 767px) {
+        body {
+          background-attachment: scroll;
+        }
+        h2 {
+          margin-top: 36px;
+        }
+        h3,
+        h2 + p,
+        h3 + p {
+          margin-left: 0;
+        }
+        #main {
+          margin-top: 0;
+          margin-bottom: 0;
+          padding: 24px;
+        }
+        #main p {
+          font-size: 16px;
+        }
+      }
     </style>
     <div id="container" class="container-fluid">
       <div id="main" class="col-xs-12">
-        <h2><span style="font-size: 40px">pastgift</span>，专注后端开发</h2>
+        <h2><span id="site-name">pastgift</span>，曾专注后端开发</h2>
         <p>
           某大学非计算机系毕业
-          <br>现任上海某公司高级软件架构师
-          <br>常用 Node.js、Python、Redis、MySQL
-          <br>略懂 Vue
+          <br>现任上海某公司应用开发工程师
+          <br>常用 Node.js、Python、Redis、MySQL，略懂 Vue
+          <br>因 AI 编程狂潮痛失程序员称号
+        </p>
+
+        <h2>发起的组织</h2>
+
+        <h3>D.U.M.B.</h3>
+        <p>
+          一个提醒开发者在使用 AI 时保持判断力、调试能力与责任感的公开倡议
+          <br><a href="https://dumbdevs.github.io" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> dumbdevs.github.io</a>
         </p>
 
         <h2>可公开的作品</h2>
 
-        <h3>DataFlux Func</h3>
-        <p>
-          一个基于Python 的脚本开发、管理、执行平台
-          <br><a href="https://github.com/DataFlux-cn/dataflux-func" target="_blank"><i class="fa fa-github"></i> github.com/DataFlux-cn/dataflux-func</a>
-        </p>
-
         <h3>MySQL Schema Diff</h3>
         <p>
-          一个MySQL 数据库结构对比工具
-          <br><a href="https://github.com/pastgift/mysql-schema-diff" target="_blank"><i class="fa fa-github"></i> github.com/pastgift/mysql-schema-diff</a>
+          一个 MySQL 数据库结构对比工具
+          <br><a href="https://github.com/pastgift/mysql-schema-diff" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> github.com/pastgift/mysql-schema-diff</a>
         </p>
 
         <h3>Funny Subtitle Pic</h3>
         <p>
           一个表情图片生成工具
-          <br><a href="https://github.com/pastgift/funny-subtitle-pic" target="_blank"><i class="fa fa-github"></i> github.com/pastgift/funny-subtitle-pic</a>
+          <br><a href="https://github.com/pastgift/funny-subtitle-pic" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> github.com/pastgift/funny-subtitle-pic</a>
         </p>
 
         <h3>celery-client-js</h3>
         <p>
-          一个Node.js 版Celery 客户端
-          <br><a href="https://github.com/pastgift/celery-client-js" target="_blank"><i class="fa fa-github"></i> github.com/pastgift/celery-client-js</a>
+          一个 Node.js 版 Celery 客户端
+          <br><a href="https://github.com/pastgift/celery-client-js" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> github.com/pastgift/celery-client-js</a>
         </p>
 
         <h3>sorted-json-js</h3>
         <p>
-          一个JSON 排序工具
-          <br><a href="https://github.com/pastgift/sorted-json-js" target="_blank"><i class="fa fa-github"></i> github.com/pastgift/sorted-json-js</a>
+          一个 JSON 排序工具
+          <br><a href="https://github.com/pastgift/sorted-json-js" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> github.com/pastgift/sorted-json-js</a>
         </p>
 
         <h3>object-checker-js</h3>
         <p>
-          一个JSON 结构检查工具
-          <br><a href="https://github.com/pastgift/object-checker-js" target="_blank"><i class="fa fa-github"></i> github.com/pastgift/object-checker-js</a>
+          一个 JSON 结构检查工具
+          <br><a href="https://github.com/pastgift/object-checker-js" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> github.com/pastgift/object-checker-js</a>
         </p>
       </div>
 
       <div id="beian-foot" class="col-xs-12">
-        <a target="_blank" href="" id="beianURL">
-          <img src="imgs/beian.png" style="margin-top: -5px;" />
+        <a target="_blank" rel="noopener noreferrer" href="" id="beianURL">
+          <img src="imgs/beian.png" alt="公安备案图标">
           苏公网安备 <span id="beian">32059002003734</span>号
         </a>
         &#12288;
-        <a target="_blank" href="https://beian.miit.gov.cn">苏ICP备<span id="miit">16060547号-1<span></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://beian.miit.gov.cn">苏ICP备<span id="miit">16060547号-1</span></a>
       </div>
     </div>
+    <script type="text/javascript">
+      var topDomain = location.host.split('.').slice(-2).join('.');
+      var beianBaseURL = 'http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=';
+      var beianMap = {
+        'pastgift.com': { beian: '32059002003735', miit: '16060547号-3' },
+        'pastgift.net': { beian: '32059002003736', miit: '16060547号-2' },
+        default       : { beian: '32059002003734', miit: '16060547号-1' },
+      }
+
+      var beian = beianMap[topDomain] || beianMap.default;
+      $(function(){
+        $('#miit').text(beian.miit);
+        $('#beian').text(beian.beian);
+        $('#beianURL').attr('href', beianBaseURL + beian.beian);
+      })
+    </script>
   </body>
 </html>
-
-<script type="text/javascript">
-  var topDomain = location.host.split('.').slice(-2).join('.');
-  var beianBaseURL = 'http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=';
-  var beianMap = {
-    'pastgift.com': { beian: '32059002003735', miit: '16060547号-3' },
-    'pastgift.net': { beian: '32059002003736', miit: '16060547号-2' },
-    default       : { beian: '32059002003734', miit: '16060547号-1' },
-  }
-
-  var beian = beianMap[topDomain] || beianMap.default;
-  $(function(){
-    $('#miit').text(beian.miit);
-    $('#beian').text(beian.beian);
-    $('#beianURL').attr('href', beianBaseURL + beian.beian);
-  })
-</script>
