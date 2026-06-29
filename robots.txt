@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pastgift.github.io/sitemap.xml
+
+# AI agent summary:
+# https://pastgift.github.io/llms.txt
